@@ -64,40 +64,30 @@
     </div>
     <div id="chatMessages"></div>
     <div id="chatInput">
-      <input type="text" id="messageInput" placeholder="Type a message...">
-      <button id="sendButton">Send</button>
+      <input type="text" id="messageInput" placeholder="Type a message..." disabled>
+      <button id="sendButton" disabled>Send</button>
     </div>
   </div>
 
   <script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
   <script>
-     window.botpressWebChat.init({
-       "botId": "09e9fd18-fda2-44f9-9b3c-1973bbf25146",
-       "hostUrl": "https://cdn.botpress.cloud/webchat/v0",
-       "messagingUrl": "https://messaging.botpress.cloud",
-       "clientId": "09e9fd18-fda2-44f9-9b3c-1973bbf25146",
-       "enableConversationDeletion": true
-     });
-  </script>
-  <script>
-    // Lock the typing and send button at the bottom
-    var chatContainer = document.getElementById('chatContainer');
-    var chatMessages = document.getElementById('chatMessages');
-    var chatInput = document.getElementById('chatInput');
-    var messageInput = document.getElementById('messageInput');
-    var sendButton = document.getElementById('sendButton');
+    window.botpressWebChat.init({
+      "botId": "09e9fd18-fda2-44f9-9b3c-1973bbf25146",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v0",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "09e9fd18-fda2-44f9-9b3c-1973bbf25146",
+      "enableConversationDeletion": true
+    });
 
-    // Set the initial scroll position to the bottom
-    chatMessages.scrollTop = chatMessages.scrollHeight;
+    document.addEventListener('DOMContentLoaded', function() {
+      var chatContainer = document.getElementById('chatContainer');
+      var messageInput = document.getElementById('messageInput');
+      var sendButton = document.getElementById('sendButton');
 
-    // Disable send button and input field
-    messageInput.disabled = true;
-    sendButton.disabled = true;
-
-    // Add event listener to enable input field and send button when the chat is clicked
-    chatContainer.addEventListener('click', function() {
-      messageInput.disabled = false;
-      sendButton.disabled = false;
+      chatContainer.addEventListener('click', function() {
+        messageInput.disabled = false;
+        sendButton.disabled = false;
+      });
     });
   </script>
 </body>
