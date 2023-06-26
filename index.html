@@ -19,13 +19,22 @@
 
   <script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
   <script>
-    window.botpressWebChat.init({
-      "botId": "09e9fd18-fda2-44f9-9b3c-1973bbf25146",
-      "hostUrl": "https://cdn.botpress.cloud/webchat/v0",
-      "messagingUrl": "https://messaging.botpress.cloud",
-      "clientId": "09e9fd18-fda2-44f9-9b3c-1973bbf25146",
-      "enableConversationDeletion": true
-    });
+   window.botpressWebChat.init({
+     "botId": "09e9fd18-fda2-44f9-9b3c-1973bbf25146",
+     "hostUrl": "https://cdn.botpress.cloud/webchat/v0",
+     "messagingUrl": "https://messaging.botpress.cloud",
+     "clientId": "09e9fd18-fda2-44f9-9b3c-1973bbf25146",
+     "botName": "Chatify ChatBot",
+     "avatarUrl": "https://imgur.com/a/5rsIz3t",
+     "botConversationDescription": "Chatify Chatbot is an intelligent and versatile virtual assistant designed to enhance your online interactions. With its advanced conversational abilities, Chatify Chatbot engages in meaningful and enjoyable conversations. It can provide personalized responses, understand emotions, and offer sympathetic and empathetic interactions. Whether you need advice, a friendly chat, or even some entertainment, Chatify Chatbot is here to make your experience memorable. With its customizable profile and ability to remember context, Chatify Chatbot creates a personalized and seamless conversation tailored to your preferences. Engage with Chatify Chatbot and discover a new level of interactive and engaging interactions.",
+     "termsConditions": "https://docs.google.com/document/d/1WViRe6jbIiQfReu2qMcnPvuBSfLPf9u4hiRdeQ5hpzQ/edit?usp=sharing",
+     "privacyPolicy": "https://docs.google.com/document/d/1SR1wy1gD33cdWyohLI8cvMSsYrRwVFHwZ9js7ozm66g/edit?usp=sharing",
+     "emailAddress": "chatify.chatbot@gmail.com",
+     "stylesheet": "https://github.com/ME-YOU-SICK/ChatBOT/blob/b73a6045b08afab2e5ad6c3bd923b6d0bdae036b/style.css",
+     "showBotInfoPage": true,
+     "enableConversationDeletion": true
+   });
+
 
     document.addEventListener('DOMContentLoaded', function() {
       var chatContainer = document.getElementById('chatContainer');
